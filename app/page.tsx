@@ -1,9 +1,10 @@
 "use client";
 
-import { motion, useMotionValue, useSpring, useTransform } from "motion/react";
+import { motion } from "motion/react";
 import ReactiveName from "./components/ReactiveName";
 import Navbar from "./components/Navbar";
 import ReactiveBackground from "./components/ReactiveBackground";
+import NetworkBackground from "./components/NetworkBackground";
 export default function Home() {
   return (
     <main>
@@ -13,6 +14,7 @@ export default function Home() {
         id="home"
         className="relative flex min-h-screen items-center overflow-hidden px-6 md:px-12 lg:px-24"
        >
+        <NetworkBackground />
         <ReactiveBackground />
         <div className="relative z-10 max-w-4xl">
         <motion.p

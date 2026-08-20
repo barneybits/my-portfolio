@@ -1,51 +1,45 @@
 "use client";
 
 import { useEffect } from "react";
-import { motion, useSpring } from "motion/react";
+import { motion, useMotionValue, useSpring } from "motion/react";
 
 export default function ReactiveName() {
-  const x = useSpring(0, {
-    stiffness: 120,
-    damping: 25,
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+
+  const x = useSpring(mouseX, {
+    stiffness: 150,
+    damping: 30,
+    mass: 0.5,
   });
 
-  const y = useSpring(0, {
-    stiffness: 120,
-    damping: 25,
+  const y = useSpring(mouseY, {
+    stiffness: 150,
+    damping: 30,
+    mass: 0.5,
   });
 
   useEffect(() => {
-    let animationFrame = 0;
-
     const handleMouseMove = (event: MouseEvent) => {
-      if (animationFrame) {
-        cancelAnimationFrame(animationFrame);
-      }
+      const centerX = window.innerWidth / 2;
+      const centerY = window.innerHeight / 2;
 
-      animationFrame = requestAnimationFrame(() => {
-        const centerX = window.innerWidth / 2;
-        const centerY = window.innerHeight / 2;
+      const normalizedX = (event.clientX - centerX) / centerX;
+      const normalizedY = (event.clientY - centerY) / centerY;
 
-        // Calculate how far the mouse is from the center
-        const normalizedX = (event.clientX - centerX) / centerX;
-        const normalizedY = (event.clientY - centerY) / centerY;
-
-        // Move in the OPPOSITE direction
-        x.set(-normalizedX * 8);
-        y.set(-normalizedY * 5);
-      });
+      // Move away from the cursor.
+      mouseX.set(-normalizedX * 6);
+      mouseY.set(-normalizedY * 4);
     };
 
-    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("mousemove", handleMouseMove, {
+      passive: true,
+    });
 
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
-
-      if (animationFrame) {
-        cancelAnimationFrame(animationFrame);
-      }
     };
-  }, [x, y]);
+  }, [mouseX, mouseY]);
 
   return (
     <motion.h1
