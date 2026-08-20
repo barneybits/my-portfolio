@@ -71,12 +71,9 @@ export default function Home() {
       {/* About text */}
       <div>
         <p className="text-sm uppercase tracking-[0.3em] text-blue-400">
-          About me
+          About
         </p>
 
-        <h2 className="mt-4 text-4xl font-bold md:text-5xl">
-          About
-        </h2>
 
         <p className="mt-8 max-w-3xl text-lg leading-relaxed text-zinc-400">
           My name is Barnabas "Barney" Toth and I'm currently working as an SQA Supporter at Samsung in Aalborg, Denmark.
