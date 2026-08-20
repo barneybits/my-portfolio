@@ -1,39 +1,62 @@
+"use client";
+
+import { motion, useMotionValue, useSpring, useTransform } from "motion/react";
+import ReactiveName from "./components/ReactiveName";
+import Navbar from "./components/Navbar";
+import ReactiveBackground from "./components/ReactiveBackground";
 export default function Home() {
   return (
     <main>
+      <Navbar />
+
       <section
         id="home"
-        className="min-h-screen flex items-center px-6 md:px-12 lg:px-24"
+        className="relative flex min-h-screen items-center overflow-hidden px-6 md:px-12 lg:px-24"
+       >
+        <ReactiveBackground />
+        <div className="relative z-10 max-w-4xl">
+        <motion.p
+        initial={{ opacity: 0, y: 15 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="mb-6 text-sm uppercase tracking-[0.3em] text-blue-400"
       >
-        <div className="max-w-4xl">
-          <p className="mb-6 text-sm uppercase tracking-[0.3em] text-blue-400">
-            SQA Support • Bluetooth
-          </p>
+        SQA Support • Bluetooth
+  </motion.p>
 
-          <h1 className="text-5xl font-bold tracking-tight md:text-7xl">
-            Barnabas Toth
-          </h1>
+    <ReactiveName />
 
-          <p className="mt-8 max-w-2xl text-lg leading-relaxed text-zinc-400 md:text-xl">
-            Working with software testing, troubleshooting and automation, with a particular focus on bluetooth technology.
-          </p>
+  <motion.p
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.8, delay: 0.35 }}
+    className="mt-8 max-w-2xl text-lg leading-relaxed text-zinc-400 md:text-xl"
+  >
+    Working with software testing, troubleshooting and automation,
+    with a particular focus on Bluetooth technology.
+  </motion.p>
 
-          <div className="mt-10 flex gap-4">
-            <a
-              href="#projects"
-              className="rounded-lg bg-blue-500 px-6 py-3 font-medium text-white transition hover:bg-blue-400"
-            >
-              View my work
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.8, delay: 0.55 }}
+    className="mt-10 flex gap-4"
+  >
+    <a
+      href="#projects"
+      className="rounded-lg bg-blue-500 px-6 py-3 font-medium text-white transition hover:bg-blue-400"
+    >
+      View my work
+    </a>
+
+    <a
+      href="#contact"
+      className="rounded-lg border border-zinc-700 px-6 py-3 font-medium transition hover:border-zinc-500"
+    >
+      Contact me
             </a>
-
-            <a
-              href="#contact"
-              className="rounded-lg border border-zinc-700 px-6 py-3 font-medium transition hover:border-zinc-500"
-            >
-              Contact me
-            </a>
-          </div>
-        </div>
+          </motion.div>
+      </div>
       </section>
 
       <section
@@ -307,7 +330,7 @@ export default function Home() {
         className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6 transition hover:-translate-y-1 hover:border-zinc-600"
       >
         <p className="text-sm text-zinc-500">Email</p>
-        <p className="mt-2 font-medium">Get in touch</p>
+        <p className="mt-2 font-medium">barneytoth@icloud.com</p>
       </a>
 
       <a
