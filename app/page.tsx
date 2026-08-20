@@ -63,43 +63,164 @@ export default function Home() {
 
       <section
   id="about"
-  className="min-h-screen border-t border-zinc-800 px-6 py-32 md:px-12 lg:px-24"
+  className="relative border-t border-zinc-800 px-6 py-32 md:px-12 lg:px-24"
 >
-  <div className="max-w-4xl">
-    <h2 className="text-4xl font-bold">About</h2>
+  <div className="mx-auto max-w-6xl">
+    <div className="grid gap-16 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
 
-    <p className="mt-8 max-w-3xl text-lg leading-relaxed text-zinc-400">
-      My name is Barnabas "Barney" Toth, an SQA Tester at Samsung in Aalborg, Denmark.
-      I'm originally from Budapest, Hungary, where I studied computer
-      science at BMSZC Blathy Otto Titusz IT High School. This is also where I 
-      received my IT Systems Maintenance Technician qualification.
-    </p>
-
-    <p className="mt-6 max-w-3xl text-lg leading-relaxed text-zinc-400">
-      I work with tools such as Jira, Git, Ubuntu,
-      ADB and Excel, while also collecting logs and data to help
-      investigate and reproduce different issues.
-    </p>
-
-    <div className="mt-12 grid gap-8 md:grid-cols-2">
+      {/* About text */}
       <div>
-        <h3 className="text-xl font-semibold">Education</h3>
+        <p className="text-sm uppercase tracking-[0.3em] text-blue-400">
+          About me
+        </p>
 
-        <p className="mt-3 leading-relaxed text-zinc-400">
-          BMSZC Blathy Otto Titusz IT High School
-          <br />
-          
+        <h2 className="mt-4 text-4xl font-bold md:text-5xl">
+          About
+        </h2>
+
+        <p className="mt-8 max-w-3xl text-lg leading-relaxed text-zinc-400">
+          My name is Barnabas "Barney" Toth and I'm currently working as an SQA Supporter at Samsung in Aalborg, Denmark.
+          I'm originally from Budapest, Hungary,
+          where I studied computer science at BMSZC Blathy Otto Titusz
+          IT High School. That's is also where I got my IT Systems
+          Maintenance Technician qualification.
+        </p>
+        <p className="mt-8 max-w-3xl text-lg leading-relaxed text-zinc-400">
+        Outside of work, I have quite a few interests.
+        I enjoy travelling with my girlfriend and our little dog while taking photos along the way.
+        I'm also interested in cars, planes or really anything with an engine. I spend some of my free time gaming, 
+        working on personal projects and sometimes experimenting with technology.
         </p>
       </div>
 
-      <div>
-        <h3 className="text-xl font-semibold">Certifications</h3>
+      {/* Timeline */}
+      <div className="relative">
+        <div className="absolute left-[7px] top-2 h-[calc(100%-1rem)] w-px bg-zinc-800" />
 
-        <ul className="mt-3 space-y-2 text-zinc-400">
-          <li>FEOR 3142 - IT Systems Maintenance Technician</li>
-          <li>Google - Introduction to AI</li>
-          <li>Microsoft - Work Smarter with Microsoft Excel</li>
-        </ul>
+        <div className="space-y-12">
+          {/* Samsung */}
+          <div className="relative pl-10">
+            <div className="absolute left-0 top-2 h-4 w-4 rounded-full border-4 border-zinc-950 bg-blue-500" />
+
+            <p className="text-sm text-blue-400">
+              2026 — Present
+            </p>
+
+            <h3 className="mt-2 text-xl font-semibold">
+              Samsung
+            </h3>
+
+            <p className="mt-2 text-zinc-400">
+              SQA Tester · Aalborg, Denmark
+            </p>
+          </div>
+
+          <div className="relative pl-10">
+    <div className="absolute left-0 top-2 h-4 w-4 rounded-full border-4 border-zinc-950 bg-zinc-600" />
+
+    <p className="text-sm text-zinc-500">
+      2021 — 2026
+    </p>
+
+    <h3 className="mt-2 text-xl font-semibold">
+      Azzurra Nordkraft
+    </h3>
+
+          <p className="mt-2 text-zinc-400">
+              Restaurant Employee · Aalborg, Denmark
+          </p>
+          </div>
+
+          {/* Aalborg */}
+          <div className="relative pl-10">
+            <div className="absolute left-0 top-2 h-4 w-4 rounded-full border-4 border-zinc-950 bg-zinc-600" />
+
+            <p className="text-sm text-zinc-500">
+              2021
+            </p>
+
+            <h3 className="mt-2 text-xl font-semibold">
+              Moved to Denmark
+            </h3>
+
+            <p className="mt-2 text-zinc-400">
+              Continuing my journey in Aalborg.
+            </p>
+          </div>
+
+          {/* Education */}
+          <div className="relative pl-10">
+            <div className="absolute left-0 top-2 h-4 w-4 rounded-full border-4 border-zinc-950 bg-zinc-600" />
+
+            <p className="text-sm text-zinc-500">
+              2017 — 2021
+            </p>
+
+            <h3 className="mt-2 text-xl font-semibold">
+              BMSZC Blathy Otto Titusz IT High School
+            </h3>
+
+            <p className="mt-2 text-zinc-400">
+              Computer Science · IT Systems Maintenance Technician
+            </p>
+          </div>
+
+          {/* Budapest */}
+          <div className="relative pl-10">
+            <div className="absolute left-0 top-2 h-4 w-4 rounded-full border-4 border-zinc-950 bg-zinc-600" />
+
+            <p className="text-sm text-zinc-500">
+              Budapest, Hungary
+            </p>
+
+            <h3 className="mt-2 text-xl font-semibold">
+              Budapest
+            </h3>
+
+            <p className="mt-2 text-zinc-400">
+              Born and raised in Budapest, Hungary.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {/* Certifications */}
+    <div className="mt-24 border-t border-zinc-800 pt-16">
+      <p className="text-sm uppercase tracking-[0.3em] text-blue-400">
+        Certifications
+      </p>
+
+      <div className="mt-8 grid gap-4 md:grid-cols-3">
+        <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6 transition duration-300 hover:-translate-y-1 hover:border-zinc-600">
+          <p className="text-sm text-zinc-500">
+            FEOR 3142
+          </p>
+
+          <h3 className="mt-3 font-semibold">
+            IT Systems Maintenance Technician
+          </h3>
+        </div>
+
+        <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6 transition duration-300 hover:-translate-y-1 hover:border-zinc-600">
+          <p className="text-sm text-zinc-500">
+            Google
+          </p>
+
+          <h3 className="mt-3 font-semibold">
+            Introduction to AI
+          </h3>
+        </div>
+
+        <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6 transition duration-300 hover:-translate-y-1 hover:border-zinc-600">
+          <p className="text-sm text-zinc-500">
+            Microsoft
+          </p>
+
+          <h3 className="mt-3 font-semibold">
+            Work Smarter with Microsoft Excel
+          </h3>
+        </div>
       </div>
     </div>
   </div>
