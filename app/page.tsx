@@ -44,9 +44,10 @@ export default function Home() {
     <h2 className="text-4xl font-bold">About</h2>
 
     <p className="mt-8 max-w-3xl text-lg leading-relaxed text-zinc-400">
-      I'm Barnabas "Barney" Toth, an SQA Supporter at Samsung in Aalborg, Denmark.
-      I was born in Budapest, Hungary, where I studied computer
-      science at BMSZC Blathy Otto Titusz IT High School.
+      My name is Barnabas "Barney" Toth, an SQA Tester at Samsung in Aalborg, Denmark.
+      I'm originally from Budapest, Hungary, where I studied computer
+      science at BMSZC Blathy Otto Titusz IT High School. This is also where I 
+      received my IT Systems Maintenance Technician qualification.
     </p>
 
     <p className="mt-6 max-w-3xl text-lg leading-relaxed text-zinc-400">
@@ -93,16 +94,17 @@ export default function Home() {
           <p className="text-lg text-blue-400">SQA Supporter</p>
         </div>
 
-        <p className="text-sm text-zinc-500">
-          Aalborg, Denmark
-        </p>
+      <div className="text-sm text-zinc-500 md:text-right">
+        <p>June 2026 - Present</p>
+        <p>Aalborg, Denmark</p>
       </div>
+    </div>
 
       <p className="mt-8 max-w-3xl text-lg leading-relaxed text-zinc-400">
         My role involves investigating
         reported issues, performing manual testing, collecting
-        logs, and supporting the software team with
-        reproducing and understanding problems.
+        logs, and supporting the software infrastructure team with
+        reproducing and understanding errors.
       </p>
 
       <div className="mt-12 grid gap-8 md:grid-cols-3">
@@ -154,7 +156,7 @@ export default function Home() {
 
         <p className="mt-4 max-w-3xl text-lg leading-relaxed text-zinc-400">
           I automated parts of our test plan using Excel
-          Power Query, allowing information to be populated automatically
+          Power Query, allowing information to be filled out automatically
           from multiple tables and sheets. This reduced repetitive manual
           data handling and made the test plan easier to maintain.
         </p>
@@ -163,38 +165,174 @@ export default function Home() {
   </div>
 </section>
 
-      <section
-        id="skills"
-        className="min-h-screen border-t border-zinc-800 px-6 py-32 md:px-12 lg:px-24"
-      >
-        <h2 className="text-4xl font-bold">Skills</h2>
+<section
+  id="projects"
+  className="min-h-screen border-t border-zinc-800 px-6 py-32 md:px-12 lg:px-24"
+>
+  <div className="max-w-5xl">
+    <h2 className="text-4xl font-bold">Projects</h2>
 
-        <p className="mt-6 max-w-2xl text-lg text-zinc-400">
-          Technologies and areas I work with.
+    <p className="mt-6 max-w-3xl text-lg leading-relaxed text-zinc-400">
+      A selection of personal and technical projects I'm currently
+      working on. More details will be added as these projects develop.
+    </p>
+
+    <div className="mt-16 grid gap-6 md:grid-cols-2">
+      {/* Home Lab */}
+      <div className="group rounded-2xl border border-zinc-800 bg-zinc-900/40 p-8 transition duration-300 hover:-translate-y-1 hover:border-zinc-600">
+        <div className="flex items-start justify-between">
+          <p className="text-sm text-zinc-500">01</p>
+
+          <span className="rounded-full border border-blue-400/30 bg-blue-400/10 px-3 py-1 text-xs text-blue-400">
+            In progress
+          </span>
+        </div>
+
+        <h3 className="mt-8 text-2xl font-semibold">
+          Home Lab
+        </h3>
+
+        <p className="mt-4 leading-relaxed text-zinc-400">
+          Building a compact and quiet Ubuntu Server for game hosting,
+          network storage, backups and experimenting with different
+          services and technologies.
         </p>
-      </section>
 
-      <section
-        id="projects"
-        className="min-h-screen border-t border-zinc-800 px-6 py-32 md:px-12 lg:px-24"
-      >
-        <h2 className="text-4xl font-bold">Projects</h2>
+        <div className="mt-6 flex flex-wrap gap-2">
+          {["Ubuntu", "Linux", "Docker", "Networking", "NAS"].map(
+            (technology) => (
+              <span
+                key={technology}
+                className="rounded-full border border-zinc-700 px-3 py-1 text-xs text-zinc-400"
+              >
+                {technology}
+              </span>
+            )
+          )}
+        </div>
+      </div>
 
-        <p className="mt-6 max-w-2xl text-lg text-zinc-400">
-          Things I've built and worked on.
+      {/* Portfolio Website */}
+      <div className="group rounded-2xl border border-zinc-800 bg-zinc-900/40 p-8 transition duration-300 hover:-translate-y-1 hover:border-zinc-600">
+        <div className="flex items-start justify-between">
+          <p className="text-sm text-zinc-500">02</p>
+
+          <span className="rounded-full border border-blue-400/30 bg-blue-400/10 px-3 py-1 text-xs text-blue-400">
+            In progress
+          </span>
+        </div>
+
+        <h3 className="mt-8 text-2xl font-semibold">
+          Personal Portfolio
+        </h3>
+
+        <p className="mt-4 leading-relaxed text-zinc-400">
+          Designing and developing this personal portfolio using
+          Next.js, TypeScript and Tailwind CSS, with a focus on
+          interactive design and subtle animations.
         </p>
-      </section>
 
-      <section
-        id="contact"
-        className="min-h-screen border-t border-zinc-800 px-6 py-32 md:px-12 lg:px-24"
-      >
-        <h2 className="text-4xl font-bold">Contact</h2>
+        <div className="mt-6 flex flex-wrap gap-2">
+          {["Next.js", "TypeScript", "React", "Tailwind CSS"].map(
+            (technology) => (
+              <span
+                key={technology}
+                className="rounded-full border border-zinc-700 px-3 py-1 text-xs text-zinc-400"
+              >
+                {technology}
+              </span>
+            )
+          )}
+        </div>
+      </div>
 
-        <p className="mt-6 max-w-2xl text-lg text-zinc-400">
-          Get in touch.
+      {/* Test Automation */}
+      <div className="group rounded-2xl border border-zinc-800 bg-zinc-900/40 p-8 transition duration-300 hover:-translate-y-1 hover:border-zinc-600">
+        <div className="flex items-start justify-between">
+          <p className="text-sm text-zinc-500">03</p>
+
+          <span className="rounded-full border border-blue-400/30 bg-blue-400/10 px-3 py-1 text-xs text-blue-400">
+            In progress
+          </span>
+        </div>
+
+        <h3 className="mt-8 text-2xl font-semibold">
+          Test Workflow Automation
+        </h3>
+
+        <p className="mt-4 leading-relaxed text-zinc-400">
+          Exploring ways to reduce repetitive testing tasks through
+          automation, including Excel Power Query and Python scripts
+          that simplify parts of the testing workflow.
         </p>
-      </section>
+
+        <div className="mt-6 flex flex-wrap gap-2">
+          {["Python", "Excel", "Power Query", "Automation"].map(
+            (technology) => (
+              <span
+                key={technology}
+                className="rounded-full border border-zinc-700 px-3 py-1 text-xs text-zinc-400"
+              >
+                {technology}
+              </span>
+            )
+          )}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section
+  id="contact"
+  className="border-t border-zinc-800 px-6 py-32 md:px-12 lg:px-24"
+>
+  <div className="mx-auto max-w-4xl">
+    <p className="text-sm uppercase tracking-[0.3em] text-blue-400">
+      Get in touch
+    </p>
+
+    <h2 className="mt-4 text-4xl font-bold md:text-5xl">
+      Let's connect.
+    </h2>
+
+    <p className="mt-6 max-w-2xl text-lg leading-relaxed text-zinc-400">
+      Whether you're interested in my work, want to discuss a project,
+      or simply want to connect, feel free to reach out.
+    </p>
+
+    <div className="mt-12 grid gap-4 sm:grid-cols-3">
+      <a
+        href="mailto:barneytoth@icloud.com"
+        className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6 transition hover:-translate-y-1 hover:border-zinc-600"
+      >
+        <p className="text-sm text-zinc-500">Email</p>
+        <p className="mt-2 font-medium">Get in touch</p>
+      </a>
+
+      <a
+        href="https://www.linkedin.com/in/thebarnabastoth/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6 transition hover:-translate-y-1 hover:border-zinc-600"
+      >
+        <p className="text-sm text-zinc-500">LinkedIn</p>
+        <p className="mt-2 font-medium">View my profile</p>
+      </a>
+
+      <a
+        href="https://github.com/barneybits"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6 transition hover:-translate-y-1 hover:border-zinc-600"
+      >
+        <p className="text-sm text-zinc-500">GitHub</p>
+        <p className="mt-2 font-medium">View my projects</p>
+      </a>
+    </div>
+  </div>
+</section>
+
     </main>
   );
 }
