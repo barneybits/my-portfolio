@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar";
 import ReactiveBackground from "./components/ReactiveBackground";
 import NetworkBackground from "./components/NetworkBackground";
 import ProjectCarousel from "./components/ProjectCarousel";
+import CustomCursor from "./components/CustomCursor";
 
 function BackToTop() {
   const [visible, setVisible] = useState(false);
@@ -55,6 +56,7 @@ export default function Home() {
   return (
     <main>
       <Navbar />
+      <CustomCursor />
       <BackToTop />
 
       {/* Home */}
