@@ -5,6 +5,7 @@ import ReactiveName from "./components/ReactiveName";
 import Navbar from "./components/Navbar";
 import ReactiveBackground from "./components/ReactiveBackground";
 import NetworkBackground from "./components/NetworkBackground";
+import ProjectCarousel from "./components/ProjectCarousel";
 export default function Home() {
   return (
     <main>
@@ -310,119 +311,23 @@ export default function Home() {
 
 <section
   id="projects"
-  className="min-h-screen border-t border-zinc-800 px-6 py-32 md:px-12 lg:px-24"
+  className="relative border-t border-zinc-800 px-6 py-32 md:px-12 lg:px-24"
 >
-  <div className="max-w-5xl">
-    <h2 className="text-4xl font-bold">Projects</h2>
-
-    <p className="mt-6 max-w-3xl text-lg leading-relaxed text-zinc-400">
-      A selection of personal and technical projects I'm currently
-      working on. More details will be added as these projects develop.
+  <div className="mx-auto max-w-6xl">
+    <p className="text-sm uppercase tracking-[0.3em] text-blue-400">
+      Projects
     </p>
 
-    <div className="mt-16 grid gap-6 md:grid-cols-2">
-      {/* Home Lab */}
-      <div className="group rounded-2xl border border-zinc-800 bg-zinc-900/40 p-8 transition duration-300 hover:-translate-y-1 hover:border-zinc-600">
-        <div className="flex items-start justify-between">
-          <p className="text-sm text-zinc-500">01</p>
+    <h2 className="mt-4 text-4xl font-bold md:text-5xl">
+      Things I'm building.
+    </h2>
 
-          <span className="rounded-full border border-blue-400/30 bg-blue-400/10 px-3 py-1 text-xs text-blue-400">
-            In progress
-          </span>
-        </div>
+    <p className="mt-6 max-w-2xl text-lg leading-relaxed text-zinc-400">
+      Personal projects where I get to experiment, build and learn
+      outside of work.
+    </p>
 
-        <h3 className="mt-8 text-2xl font-semibold">
-          Home Lab
-        </h3>
-
-        <p className="mt-4 leading-relaxed text-zinc-400">
-          Building a compact and quiet Ubuntu Server for game hosting,
-          network storage, backups and experimenting with different
-          services and technologies.
-        </p>
-
-        <div className="mt-6 flex flex-wrap gap-2">
-          {["Ubuntu", "Linux", "Docker", "Networking", "NAS"].map(
-            (technology) => (
-              <span
-                key={technology}
-                className="rounded-full border border-zinc-700 px-3 py-1 text-xs text-zinc-400"
-              >
-                {technology}
-              </span>
-            )
-          )}
-        </div>
-      </div>
-
-      {/* Portfolio Website */}
-      <div className="group rounded-2xl border border-zinc-800 bg-zinc-900/40 p-8 transition duration-300 hover:-translate-y-1 hover:border-zinc-600">
-        <div className="flex items-start justify-between">
-          <p className="text-sm text-zinc-500">02</p>
-
-          <span className="rounded-full border border-blue-400/30 bg-blue-400/10 px-3 py-1 text-xs text-blue-400">
-            In progress
-          </span>
-        </div>
-
-        <h3 className="mt-8 text-2xl font-semibold">
-          Personal Portfolio
-        </h3>
-
-        <p className="mt-4 leading-relaxed text-zinc-400">
-          Designing and developing this personal portfolio using
-          Next.js, TypeScript and Tailwind CSS, with a focus on
-          interactive design and subtle animations.
-        </p>
-
-        <div className="mt-6 flex flex-wrap gap-2">
-          {["Next.js", "TypeScript", "React", "Tailwind CSS"].map(
-            (technology) => (
-              <span
-                key={technology}
-                className="rounded-full border border-zinc-700 px-3 py-1 text-xs text-zinc-400"
-              >
-                {technology}
-              </span>
-            )
-          )}
-        </div>
-      </div>
-
-      {/* Test Automation */}
-      <div className="group rounded-2xl border border-zinc-800 bg-zinc-900/40 p-8 transition duration-300 hover:-translate-y-1 hover:border-zinc-600">
-        <div className="flex items-start justify-between">
-          <p className="text-sm text-zinc-500">03</p>
-
-          <span className="rounded-full border border-blue-400/30 bg-blue-400/10 px-3 py-1 text-xs text-blue-400">
-            In progress
-          </span>
-        </div>
-
-        <h3 className="mt-8 text-2xl font-semibold">
-          Test Workflow Automation
-        </h3>
-
-        <p className="mt-4 leading-relaxed text-zinc-400">
-          Exploring ways to reduce repetitive testing tasks through
-          automation, including Excel Power Query and Python scripts
-          that simplify parts of the testing workflow.
-        </p>
-
-        <div className="mt-6 flex flex-wrap gap-2">
-          {["Python", "Excel", "Power Query", "Automation"].map(
-            (technology) => (
-              <span
-                key={technology}
-                className="rounded-full border border-zinc-700 px-3 py-1 text-xs text-zinc-400"
-              >
-                {technology}
-              </span>
-            )
-          )}
-        </div>
-      </div>
-    </div>
+    <ProjectCarousel />
   </div>
 </section>
 
@@ -440,8 +345,8 @@ export default function Home() {
     </h2>
 
     <p className="mt-6 max-w-2xl text-lg leading-relaxed text-zinc-400">
-      Whether you're interested in my work, want to discuss a project,
-      or simply want to connect, feel free to reach out.
+      If you're interested in my work, want to discuss a project,
+      or just want to connect, feel free to reach out on the links below.
     </p>
 
     <div className="mt-12 grid gap-4 sm:grid-cols-3">
