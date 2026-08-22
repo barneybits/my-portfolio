@@ -16,7 +16,7 @@ type Project = {
 
 const projects: Project[] = [
   {
-    title: "Juwel Rio 125 Aquarium Monitor",
+    title: "Aquarium Monitor",
     status: "In development",
     description:
       "A personal project combining a 3D representation of my aquarium with real-time monitoring and IoT hardware.",
@@ -52,7 +52,7 @@ const projects: Project[] = [
   title: "Personal Portfolio",
   status: "In development",
   description:
-    "A personal portfolio website I'm building to share my experience, projects and technical interests.",
+    "A personal portfolio website I'm building to share my experience, projects and technical interests. If you're reading this, congratulations — you've already seen the project in action :-)",
   technologies: [
     "Next.js",
     "TypeScript",
@@ -78,7 +78,7 @@ const projects: Project[] = [
   github: "https://github.com/barneybits/my-portfolio",
 },
   {
-    title: "Home Lab & Network",
+    title: "Home Lab",
     status: "Planned",
     description:
       "A compact home server project I'm planning to build around storage, backups, game server hosting and self-hosted network services.",
@@ -149,7 +149,7 @@ export default function ProjectCarousel() {
         </button>
 
         {/* Project */}
-        <div className="min-w-0 flex-1 overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-900/40">
+        <div className="min-w-0 flex-1 overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-950">
           <AnimatePresence mode="wait">
             <motion.div
               key={project.title}
